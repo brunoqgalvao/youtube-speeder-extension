@@ -1,0 +1,23 @@
+{
+    "name": "YoutubeSpeeder",
+    "description": "Control youtube video playback rate with keyboard up and down arrows",
+    "version": "1.1",
+    "icons" : {"128":"arrows.png"},
+    "background":{
+        "persistent":false,
+        "scripts":["background.js"]
+    },
+    "content_scripts":[
+        {
+            "matches": ["https://www.youtube.com/*","https://www.youtube.com/*","https://www.udemy.com/*","https://www.udemy.com/*"],
+            "css":["mystyles.css"],
+            "js":["content.js"]
+        }
+    ],
+    "permissions": ["activeTab","declarativeContent","storage"],
+    "manifest_version": 2,
+    "browser_action":{
+        "default_icon" : "arrows.png",
+        "default_popup" : "popup.html"
+    }
+  }
