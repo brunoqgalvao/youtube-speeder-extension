@@ -1,5 +1,5 @@
 function addPlaybackControl(event) {
-    rate =document.zz('video')[0].playbackRate;
+    rate =document.querySelectorAll('video')[0].playbackRate;
      if (event.keyCode === 38) {
          rate = rate + 0.2;console.log('New Playback Rate' + rate);event.preventDefault();
         };
